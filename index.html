@@ -19,19 +19,35 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 
-  <!-- Aplicar tema guardado antes de pintar la página -->
+  <!-- Control de Tema Blanco / Oscuro -->
   <script>
     (function () {
+      var root = document.documentElement;
       try {
-        var saved = localStorage.getItem("miri-theme");
-        if (saved === "dark") {
-          document.documentElement.setAttribute("data-theme", "dark");
+        if (localStorage.getItem("miri-theme") === "dark") {
+          root.setAttribute("data-theme", "dark");
         } else {
-          document.documentElement.removeAttribute("data-theme");
+          root.removeAttribute("data-theme");
         }
       } catch (e) {}
+
+      window.toggleMiriTheme = function () {
+        var isDark = root.getAttribute("data-theme") === "dark";
+        if (isDark) {
+          root.removeAttribute("data-theme");
+          if (document.body) document.body.removeAttribute("data-theme");
+        } else {
+          root.setAttribute("data-theme", "dark");
+          if (document.body) document.body.setAttribute("data-theme", "dark");
+        }
+        try {
+          localStorage.setItem("miri-theme", isDark ? "light" : "dark");
+        } catch (e) {}
+        var txt = document.getElementById("theme-toggle-text");
+        if (txt) txt.textContent = isDark ? "Oscuro" : "Blanco";
+      };
     })();
   </script>
 </head>
@@ -650,6 +666,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

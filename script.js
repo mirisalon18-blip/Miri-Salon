@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeText = document.getElementById("theme-toggle-text");
 
     if (themeText) {
-      themeText.textContent = isDark ? "Claro" : "Oscuro";
+      themeText.textContent = isDark ? "Blanco" : "Oscuro";
     }
     if (themeToggle) {
       themeToggle.setAttribute(
