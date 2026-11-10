@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>“Miri” Salón | Extensiones de Cabello, Cortes y Estilismo en Santa Ana Nextlalpan</title>
+  <meta name="description" content="Centro de estética y salón de belleza en Santa Ana Nextlalpan, Méx. Especialistas en extensiones de cabello, cortes modernos, estilismo capilar y tratamientos de crecimiento. Atención personalizada por Miriam." />
+  <meta name="keywords" content="Miri Salón, salón de belleza Nextlalpan, extensiones de cabello Santa Ana Nextlalpan, estética en Nextlalpan, cortes de cabello, estilismo capilar, Miriam salón" />
+
+  <!-- Favicon (Imagen Oficial de Miri Salón) -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Google Fonts: Cormorant Garamond (Elegante/Editorial) & Plus Jakarta Sans (Moderna/Limpia) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-item">
+        <span class="status-badge" id="open-status-badge">
+          <span class="status-dot"></span>
+          <span id="open-status-text">Lunes a Sábado · 9:00 a.m. – 5:00 p.m.</span>
+        </span>
+      </div>
+      <div class="top-bar-item hide-mobile">
+        <i data-lucide="map-pin" class="icon-xs"></i>
+        <span>Av. 2 de Marzo Mz 024, Central, Santa Ana Nextlalpan, Méx.</span>
+      </div>
+      <div class="top-bar-item">
+        <i data-lucide="star" class="icon-xs star-gold"></i>
+        <span><strong>4.9 / 5.0</strong> en Google Maps (21 opiniones)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#inicio" class="brand-logo" aria-label="Miri Salón Inicio">
+        <img src="logo-miri.jpg" alt="Logotipo oficial de Miri Salón" class="brand-logo-img" />
+        <div class="brand-text">
+          <span class="brand-name">“Miri” Salón</span>
+          <span class="brand-tagline">Hair &amp; Beauty Studio</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#experiencia" class="nav-link">La Experiencia</a>
+        <a href="#galeria" class="nav-link">Galería</a>
+        <a href="#resenas" class="nav-link">Reseñas</a>
+        <a href="#ubicacion" class="nav-link">Ubicación y Horarios</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://maps.app.goo.gl/iz6ZrqJktoG5a7Fm6" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <i data-lucide="map-pin" class="icon-sm"></i>
+          <span>Cómo Llegar</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+      <div class="hero-bg-decor"></div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="eyebrow-pill">
+            <i data-lucide="sparkles" class="icon-xs"></i>
+            <span>Centro de Estética &amp; Cuidado Capilar en Nextlalpan</span>
+          </div>
+
+          <h1 class="hero-title">
+            Realza tu belleza con un cabello <em>radiante, largo y lleno de vida</em>.
+          </h1>
+
+          <p class="hero-description">
+            En <strong>“Miri” Salón</strong> transformamos tu imagen con técnicas profesionales en <strong>extensiones de cabello, cortes de vanguardia y estilismo capilar</strong>. Atención cálida y personalizada por <strong>Miriam</strong> para que tu cabello luzca saludable y espectacular.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#ubicacion" class="btn btn-primary btn-lg">
+              <i data-lucide="map-pin" class="icon-md"></i>
+              <span>Ver Ubicación y Horarios</span>
+            </a>
+            <a href="#servicios" class="btn btn-outline btn-lg">
+              <span>Conocer Servicios</span>
+              <i data-lucide="arrow-right" class="icon-sm"></i>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <div class="stat-value">4.9 <span class="stars-inline">★★★★★</span></div>
+              <div class="stat-label">Calificación en Google Maps</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <div class="stat-value">100%</div>
+              <div class="stat-label">Atención personalizada por Miriam</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <div class="stat-value">Calidad</div>
+              <div class="stat-label">Cabello saludable y con crecimiento</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-image-frame">
+            <img 
+              src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85" 
+              alt="Estilismo profesional y cuidado capilar en Miri Salón" 
+              class="hero-img-main"
+            />
+            <div class="floating-card floating-review">
+              <div class="floating-stars">★★★★★</div>
+              <p>“Excelente atención, mi cabello crece demasiado en manos de Miriam ✨ sumamente recomendado”</p>
+              <span class="floating-author">— Deni Xcaret, Cliente verificada</span>
+            </div>
+            <div class="floating-card floating-badge">
+              <i data-lucide="crown" class="icon-gold"></i>
+              <div>
+                <strong>Especialistas en Extensiones</strong>
+                <span>Volumen y largo natural</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specialties / Services Section -->
+    <section class="section services-section" id="servicios">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-subtitle">Nuestras Especialidades</span>
+          <h2 class="section-title">Servicios de Estilismo Capilar</h2>
+          <p class="section-desc">
+            Cada servicio incluye atención dedicada para cuidar la salud de tu fibra capilar y lograr el estilo que deseas. Visítanos directamente en nuestra sucursal en Santa Ana Nextlalpan.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1: Extensiones de Cabello -->
+          <article class="service-card featured-service reveal">
+            <div class="service-tag">Servicio Estrella</div>
+            <div class="service-img-wrap">
+              <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Extensiones de Cabello en Miri Salón" loading="lazy" />
+            </div>
+            <div class="service-body">
+              <div class="service-icon">
+                <i data-lucide="sparkles"></i>
+              </div>
+              <h3 class="service-title">Extensiones de Cabello</h3>
+              <p class="service-text">
+                Logra una melena larga, abundante y de aspecto totalmente natural. Colocación profesional que cuida tu cabello propio sin maltratarlo, integrando color y textura a la perfección.
+              </p>
+              <ul class="service-features">
+                <li><i data-lucide="check" class="icon-xs"></i> Aplicación segura y cómoda</li>
+                <li><i data-lucide="check" class="icon-xs"></i> Diseño de volumen y largo personalizado</li>
+                <li><i data-lucide="check" class="icon-xs"></i> Mantenimiento y retiro cuidadoso</li>
+              </ul>
+              <a href="#ubicacion" class="btn btn-secondary btn-full">
+                <span>Visítanos en el Salón</span>
+                <i data-lucide="map-pin" class="icon-sm"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 2: Cortes y Diseño Capilar -->
+          <article class="service-card reveal">
+            <div class="service-img-wrap">
+              <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80" alt="Cortes de cabello y diseño de imagen" loading="lazy" />
+            </div>
+            <div class="service-body">
+              <div class="service-icon">
+                <i data-lucide="scissors"></i>
+              </div>
+              <h3 class="service-title">Cortes &amp; Crecimiento Sano</h3>
+              <p class="service-text">
+                Conocida por nuestras clientas por tener "buena mano" para estimular el crecimiento saludable. Cortes en capas, bob, mariposa, despuntes terapéuticos y diseño acorde a tu rostro.
+              </p>
+              <ul class="service-features">
+                <li><i data-lucide="check" class="icon-xs"></i> Corte de dama, caballero y niños</li>
+                <li><i data-lucide="check" class="icon-xs"></i> Despunte para estimular el crecimiento</li>
+                <li><i data-lucide="check" class="icon-xs"></i> Diseño de fleco y contorno facial</li>
+              </ul>
+              <a href="#ubicacion" class="btn btn-secondary btn-full">
+                <span>Visítanos en el Salón</span>
+                <i data-lucide="map-pin" class="icon-sm"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 3: Estilismo, Peinado y Moldeado -->
+          <article class="service-card reveal">
+            <div class="service-img-wrap">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Estilismo capilar, planchado y ondas" loading="lazy" />
+            </div>
+            <div class="service-body">
+              <div class="service-icon">
+                <i data-lucide="wand-2"></i>
+              </div>
+              <h3 class="service-title">Estilismo, Alaciado &amp; Peinados</h3>
+              <p class="service-text">
+                Moldeado profesional para el día a día o para tus eventos especiales. Brushing con volumen, ondas suaves de salón, planchado exprés con protección térmica y peinados elegantes.
+              </p>
+              <ul class="service-features">
+                <li><i data-lucide="check" class="icon-xs"></i> Ondas de sirena, glam y alaciados</li>
+                <li><i data-lucide="check" class="icon-xs"></i> Peinados para eventos y fiestas</li>
+                <li><i data-lucide="check" class="icon-xs"></i> Acabado brillante y duradero</li>
+              </ul>
+              <a href="#ubicacion" class="btn btn-secondary btn-full">
+                <span>Visítanos en el Salón</span>
+                <i data-lucide="map-pin" class="icon-sm"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 4: Tratamientos Capilares & Color -->
+          <article class="service-card reveal">
+            <div class="service-img-wrap">
+              <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80" alt="Tratamientos capilares e hidratación" loading="lazy" />
+            </div>
+            <div class="service-body">
+              <div class="service-icon">
+                <i data-lucide="droplets"></i>
+              </div>
+              <h3 class="service-title">Tratamientos &amp; Cuidado Capilar</h3>
+              <p class="service-text">
+                Devuélvele la sedosidad, fuerza y brillo a tu cabello. Nutrición profunda, hidratación intensiva, control de frizz y aplicación de color para mantener tu melena impecable.
+              </p>
+              <ul class="service-features">
+                <li><i data-lucide="check" class="icon-xs"></i> Hidratación y reparación capilar</li>
+                <li><i data-lucide="check" class="icon-xs"></i> Baño de color y retoque de raíz</li>
+                <li><i data-lucide="check" class="icon-xs"></i> Sellado de puntas y brillo espejo</li>
+              </ul>
+              <a href="#ubicacion" class="btn btn-secondary btn-full">
+                <span>Visítanos en el Salón</span>
+                <i data-lucide="map-pin" class="icon-sm"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Experience Section -->
+    <section class="section experience-section" id="experiencia">
+      <div class="container experience-grid">
+        <div class="experience-images reveal">
+          <div class="exp-img-primary">
+            <img src="logo-miri.jpg" alt="Imagen oficial de Miri Salón en Santa Ana Nextlalpan" />
+            <span class="img-caption-badge">
+              <i data-lucide="sparkles" class="icon-xs"></i> Identidad Oficial · Santa Ana Nextlalpan
+            </span>
+          </div>
+        </div>
+
+        <div class="experience-content reveal">
+          <span class="section-subtitle">El Toque de Miriam</span>
+          <h2 class="section-title">Más que un salón, un espacio dedicado a consentirte</h2>
+          <p class="experience-lead">
+            En <strong>“Miri” Salón</strong> creemos que cada cabellera es única. Nuestro compromiso es brindarte un trato amable, honesto y detallista desde el primer momento en que cruzas la puerta.
+          </p>
+
+          <div class="pillars-list">
+            <div class="pillar-item">
+              <div class="pillar-icon">
+                <i data-lucide="heart-handshake"></i>
+              </div>
+              <div class="pillar-text">
+                <h4>Trato Cálido por la Srita. Miriam</h4>
+                <p>Nuestros clientes destacan la paciencia, amabilidad y dedicación en cada visita, escuchando exactamente lo que buscas lograr.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">
+                <i data-lucide="sprout"></i>
+              </div>
+              <div class="pillar-text">
+                <h4>Manos que hacen crecer tu cabello</h4>
+                <p>Cuidamos la estructura de tu cabello en cada corte o colocación de extensiones para que crezca fuerte, sano y abundante.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">
+                <i data-lucide="shield-check"></i>
+              </div>
+              <div class="pillar-text">
+                <h4>Ubicación Céntrica y Segura</h4>
+                <p>Ubicados sobre Av. 2 de Marzo en la colonia Central de Santa Ana Nextlalpan, con horario corrido de lunes a sábado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Inspiration / Lookbook Gallery -->
+    <section class="section gallery-section" id="galeria">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-subtitle">Inspiración &amp; Estilo</span>
+          <h2 class="section-title">El Arte del Cabello Perfecto</h2>
+          <p class="section-desc">
+            Desde extensiones con volumen espectacular hasta cortes frescos y estilismo luminoso.
+          </p>
+        </div>
+
+        <div class="gallery-grid reveal">
+          <div class="gallery-item gallery-large">
+            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=900&q=80" alt="Estilismo y secado profesional" loading="lazy" />
+            <div class="gallery-overlay">
+              <span>Estilismo &amp; Brushing Profesional</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=600&q=80" alt="Extensiones y ondas largas" loading="lazy" />
+            <div class="gallery-overlay">
+              <span>Extensiones de Largo Natural</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80" alt="Melena saludable y con brillo" loading="lazy" />
+            <div class="gallery-overlay">
+              <span>Volumen y Textura Sedosa</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&w=600&q=80" alt="Cortes modernos en tendencia" loading="lazy" />
+            <div class="gallery-overlay">
+              <span>Cortes y Diseño de Contorno</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=600&q=80" alt="Cuidado capilar e hidratación" loading="lazy" />
+            <div class="gallery-overlay">
+              <span>Hidratación &amp; Brillo Espejo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Maps Real Reviews Section -->
+    <section class="section reviews-section" id="resenas">
+      <div class="container">
+        <div class="reviews-top-banner reveal">
+          <div class="google-rating-summary">
+            <div class="google-badge-title">
+              <svg class="google-g-icon" viewBox="0 0 24 24" width="28" height="28">
+                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.29v3.14C3.26 21.3 7.31 24 12 24z"/>
+                <path fill="#FBBC05" d="M5.28 14.24c-.24-.72-.38-1.49-.38-2.24s.14-1.52.38-2.24V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.99-3.14z"/>
+                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.99 3.14c.95-2.85 3.6-4.96 6.72-4.96z"/>
+              </svg>
+              <div>
+                <span class="section-subtitle" style="margin-bottom: 0;">Opiniones Verificadas</span>
+                <h2 class="section-title" style="margin-bottom: 0;">Lo que dicen nuestros clientes en Google</h2>
+              </div>
+            </div>
+            <div class="rating-pill-large">
+              <span class="big-score">4.9</span>
+              <div>
+                <div class="stars-row">★★★★★</div>
+                <span class="score-sub">Basado en 21 opiniones reales</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <article class="review-card reveal">
+            <div class="review-header">
+              <div class="reviewer-avatar">DX</div>
+              <div class="reviewer-meta">
+                <h4>Deni Xcaret</h4>
+                <span>Opinión en Google Maps</span>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-quote">
+              “Excelente atención, mi cabello crece demasiado en manos de Miriam ✨ sumamente recomendado”
+            </p>
+            <div class="review-tag">
+              <i data-lucide="check-circle-2" class="icon-xs"></i> Crecimiento y cuidado capilar
+            </div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="review-card reveal">
+            <div class="review-header">
+              <div class="reviewer-avatar">JB</div>
+              <div class="reviewer-meta">
+                <h4>Joel Benitez Zapata</h4>
+                <span>Local Guide · Google Maps</span>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-quote">
+              “Excelente trato y amabilidad se los recomiendo ampliamente atendidos por la señorita Miriam.”
+            </p>
+            <div class="review-tag">
+              <i data-lucide="check-circle-2" class="icon-xs"></i> Atención personalizada
+            </div>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="review-card reveal">
+            <div class="review-header">
+              <div class="reviewer-avatar">EL</div>
+              <div class="reviewer-meta">
+                <h4>Emma Isabel López Roldán</h4>
+                <span>Opinión reciente · Google Maps</span>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-quote">
+              “Pone extensiones de cabello”
+            </p>
+            <div class="review-tag">
+              <i data-lucide="check-circle-2" class="icon-xs"></i> Aplicación de extensiones
+            </div>
+          </article>
+
+          <!-- Review 4 -->
+          <article class="review-card reveal">
+            <div class="review-header">
+              <div class="reviewer-avatar">MC</div>
+              <div class="reviewer-meta">
+                <h4>María Del Rosario Cruz Sánchez</h4>
+                <span>Local Guide · Google Maps</span>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-quote">
+              “Excelente servicio”
+            </p>
+            <div class="owner-reply">
+              <strong>Respuesta de “Miri” Salón:</strong> 🙌✨
+            </div>
+          </article>
+
+          <!-- Review 5 -->
+          <article class="review-card reveal">
+            <div class="review-header">
+              <div class="reviewer-avatar">HL</div>
+              <div class="reviewer-meta">
+                <h4>Heron Lopez</h4>
+                <span>Opinión en Google Maps</span>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-quote">
+              “Exelente servicio 👌👌👌”
+            </p>
+            <div class="review-tag">
+              <i data-lucide="check-circle-2" class="icon-xs"></i> Calidad 5 estrellas
+            </div>
+          </article>
+
+          <!-- CTA Card to leave a review -->
+          <article class="review-card review-cta-card reveal">
+            <i data-lucide="heart" class="icon-lg"></i>
+            <h4>¿Ya nos visitaste en “Miri” Salón?</h4>
+            <p>Tu opinión nos ayuda a seguir creciendo y consintiendo tu cabello en Santa Ana Nextlalpan.</p>
+            <a href="https://maps.app.goo.gl/iz6ZrqJktoG5a7Fm6" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <span>Ver perfil en Google Maps</span>
+              <i data-lucide="external-link" class="icon-xs"></i>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Schedule Section -->
+    <section class="section booking-location-section" id="ubicacion">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-subtitle">Te Esperamos</span>
+          <h2 class="section-title">Ubicación y Horarios de Atención</h2>
+          <p class="section-desc">
+            Acude directamente a nuestro salón en el centro de Santa Ana Nextlalpan. Te atenderemos con gusto de lunes a sábado.
+          </p>
+        </div>
+
+        <div class="booking-location-grid">
+          <!-- Location & Schedule Info Card -->
+          <div class="info-card reveal">
+            <div class="info-header">
+              <span class="section-subtitle">Visítanos</span>
+              <h3 class="info-title">“Miri” Salón</h3>
+            </div>
+
+            <div class="contact-details-list">
+              <div class="contact-detail-item">
+                <div class="detail-icon">
+                  <i data-lucide="map-pin"></i>
+                </div>
+                <div>
+                  <strong>Dirección</strong>
+                  <p>Av. 2 de Marzo Manzana 024, Colonia Central,<br/>C.P. 55790, Santa Ana Nextlalpan, Estado de México.</p>
+                  <span class="plus-code">Plus Code: PWQF+JV Santa Ana Nextlalpan</span>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="detail-icon">
+                  <i data-lucide="clock"></i>
+                </div>
+                <div class="schedule-wrapper">
+                  <strong>Horario de Atención</strong>
+                  <ul class="schedule-table" id="schedule-list">
+                    <li data-day="1"><span>Lunes</span> <span>9:00 a.m. – 5:00 p.m.</span></li>
+                    <li data-day="2"><span>Martes</span> <span>9:00 a.m. – 5:00 p.m.</span></li>
+                    <li data-day="3"><span>Miércoles</span> <span>9:00 a.m. – 5:00 p.m.</span></li>
+                    <li data-day="4"><span>Jueves</span> <span>9:00 a.m. – 5:00 p.m.</span></li>
+                    <li data-day="5"><span>Viernes</span> <span>9:00 a.m. – 5:00 p.m.</span></li>
+                    <li data-day="6"><span>Sábado</span> <span>9:00 a.m. – 5:00 p.m.</span></li>
+                    <li data-day="0" class="closed-day"><span>Domingo</span> <span>Cerrado</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-Actions">
+              <a href="https://maps.app.goo.gl/iz6ZrqJktoG5a7Fm6" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">
+                <i data-lucide="navigation" class="icon-sm"></i>
+                <span>Cómo llegar en Google Maps</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Map Embed -->
+          <div class="location-info-col reveal">
+            <div class="map-embed-container map-embed-large">
+              <iframe 
+                title="Mapa de ubicación de Miri Salón en Santa Ana Nextlalpan"
+                src="https://www.google.com/maps?q=19.7391092,-99.0753732&hl=es-419&z=17&output=embed" 
+                width="100%" 
+                height="480" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#inicio" class="brand-logo">
+          <img src="logo-miri.jpg" alt="Logotipo oficial de Miri Salón" class="brand-logo-img" />
+          <div class="brand-text">
+            <span class="brand-name">“Miri” Salón</span>
+            <span class="brand-tagline">Hair &amp; Beauty Studio</span>
+          </div>
+        </a>
+        <p class="footer-bio">
+          Centro de estética especializado en extensiones de cabello, cortes modernos y estilismo capilar en Santa Ana Nextlalpan, Estado de México.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios Capilares</a></li>
+          <li><a href="#experiencia">La Experiencia</a></li>
+          <li><a href="#resenas">Opiniones de Clientes</a></li>
+          <li><a href="#ubicacion">Ubicación y Horarios</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Encuéntranos</h4>
+        <p>Av. 2 de Marzo Manzana 024, Central</p>
+        <p>55790 Santa Ana Nextlalpan, Méx.</p>
+        <p class="footer-hours">Lun – Sáb: 9:00 a.m. – 5:00 p.m.</p>
+        <a href="https://maps.app.goo.gl/iz6ZrqJktoG5a7Fm6" target="_blank" rel="noopener noreferrer" class="footer-map-link">
+          Ver en Google Maps →
+        </a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="current-year">2026</span> “Miri” Salón. Todos los derechos reservados.</p>
+      <p>Santa Ana Nextlalpan, Estado de México.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
