@@ -20,6 +20,17 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Aplicar tema guardado antes de pintar la página (evita parpadeo) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("miri-theme");
+        var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        if (theme === "dark") document.documentElement.setAttribute("data-theme", "dark");
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -68,6 +79,10 @@
           <i data-lucide="map-pin" class="icon-sm"></i>
           <span>Cómo Llegar</span>
         </a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar a tema oscuro" title="Cambiar tema">
+          <i data-lucide="moon" class="icon-sm icon-moon"></i>
+          <i data-lucide="sun" class="icon-sm icon-sun"></i>
+        </button>
         <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
           <i data-lucide="menu"></i>
         </button>

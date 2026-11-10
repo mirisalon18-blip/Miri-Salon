@@ -43,6 +43,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ==========================================================================
+  // 1b. Cambio de tema (Claro / Oscuro)
+  // ==========================================================================
+  const themeToggle = document.getElementById("theme-toggle");
+  const root = document.documentElement;
+
+  const updateToggleLabel = () => {
+    if (!themeToggle) return;
+    const isDark = root.getAttribute("data-theme") === "dark";
+    themeToggle.setAttribute("aria-label", isDark ? "Cambiar a tema claro" : "Cambiar a tema oscuro");
+  };
+
+  if (themeToggle) {
+    updateToggleLabel();
+    themeToggle.addEventListener("click", () => {
+      const isDark = root.getAttribute("data-theme") === "dark";
+      if (isDark) {
+        root.removeAttribute("data-theme");
+      } else {
+        root.setAttribute("data-theme", "dark");
+      }
+      try {
+        localStorage.setItem("miri-theme", isDark ? "light" : "dark");
+      } catch (e) {}
+      updateToggleLabel();
+    });
+  }
+
+  // ==========================================================================
   // 2. Estado de Horario en Vivo (Lun–Sáb 9:00 a.m. – 5:00 p.m., Dom Cerrado)
   // ==========================================================================
   const updateOpenStatus = () => {
