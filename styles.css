@@ -97,27 +97,34 @@ body,
 
 /* Botón de cambio de tema */
 .theme-toggle {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: 1px solid var(--border-subtle);
+  height: 40px;
+  padding: 0 14px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--gold-accent);
   background: var(--bg-card);
   color: var(--text-dark);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
   flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
 }
 
 .theme-toggle:hover {
+  background: var(--gold-soft);
   border-color: var(--gold-accent);
   color: var(--gold-accent);
-  transform: rotate(15deg);
+  transform: translateY(-2px);
 }
 
-.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-sun { display: none; color: var(--gold-accent); }
+.theme-toggle .icon-moon { display: block; color: var(--rose-dark); }
 [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 

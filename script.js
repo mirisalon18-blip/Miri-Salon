@@ -43,32 +43,46 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ==========================================================================
-  // 1b. Cambio de tema (Claro / Oscuro)
+  // 1b. Cambio de tema (Blanco / Oscuro)
   // ==========================================================================
-  const themeToggle = document.getElementById("theme-toggle");
   const root = document.documentElement;
 
-  const updateToggleLabel = () => {
-    if (!themeToggle) return;
+  const syncThemeUI = () => {
     const isDark = root.getAttribute("data-theme") === "dark";
-    themeToggle.setAttribute("aria-label", isDark ? "Cambiar a tema claro" : "Cambiar a tema oscuro");
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeText = document.getElementById("theme-toggle-text");
+
+    if (themeText) {
+      themeText.textContent = isDark ? "Claro" : "Oscuro";
+    }
+    if (themeToggle) {
+      themeToggle.setAttribute(
+        "aria-label",
+        isDark ? "Cambiar a tema blanco" : "Cambiar a tema oscuro"
+      );
+      themeToggle.setAttribute(
+        "title",
+        isDark ? "Cambiar a tema blanco" : "Cambiar a tema oscuro"
+      );
+    }
   };
 
-  if (themeToggle) {
-    updateToggleLabel();
-    themeToggle.addEventListener("click", () => {
-      const isDark = root.getAttribute("data-theme") === "dark";
-      if (isDark) {
-        root.removeAttribute("data-theme");
-      } else {
-        root.setAttribute("data-theme", "dark");
-      }
-      try {
-        localStorage.setItem("miri-theme", isDark ? "light" : "dark");
-      } catch (e) {}
-      updateToggleLabel();
-    });
-  }
+  window.toggleMiriTheme = () => {
+    const isDark = root.getAttribute("data-theme") === "dark";
+    if (isDark) {
+      root.removeAttribute("data-theme");
+      document.body.removeAttribute("data-theme");
+    } else {
+      root.setAttribute("data-theme", "dark");
+      document.body.setAttribute("data-theme", "dark");
+    }
+    try {
+      localStorage.setItem("miri-theme", isDark ? "light" : "dark");
+    } catch (e) {}
+    syncThemeUI();
+  };
+
+  syncThemeUI();
 
   // ==========================================================================
   // 2. Estado de Horario en Vivo (Lun–Sáb 9:00 a.m. – 5:00 p.m., Dom Cerrado)

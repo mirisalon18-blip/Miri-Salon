@@ -21,13 +21,16 @@
 
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Aplicar tema guardado antes de pintar la página (evita parpadeo) -->
+  <!-- Aplicar tema guardado antes de pintar la página -->
   <script>
     (function () {
       try {
         var saved = localStorage.getItem("miri-theme");
-        var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-        if (theme === "dark") document.documentElement.setAttribute("data-theme", "dark");
+        if (saved === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+          document.documentElement.removeAttribute("data-theme");
+        }
       } catch (e) {}
     })();
   </script>
@@ -79,9 +82,24 @@
           <i data-lucide="map-pin" class="icon-sm"></i>
           <span>Cómo Llegar</span>
         </a>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar a tema oscuro" title="Cambiar tema">
-          <i data-lucide="moon" class="icon-sm icon-moon"></i>
-          <i data-lucide="sun" class="icon-sm icon-sun"></i>
+        <button class="theme-toggle" id="theme-toggle" type="button" onclick="window.toggleMiriTheme && window.toggleMiriTheme()" aria-label="Cambiar entre tema claro y oscuro" title="Cambiar tema">
+          <!-- Icono Luna (para pasar a oscuro) -->
+          <svg class="icon-sm icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+          <!-- Icono Sol (para pasar a blanco/claro) -->
+          <svg class="icon-sm icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+          <span class="theme-toggle-text" id="theme-toggle-text">Oscuro</span>
         </button>
         <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
           <i data-lucide="menu"></i>
