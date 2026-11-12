@@ -1,3 +1,5 @@
 {
-    "workbench.experimental.cloudChanges.autoStore": "onShutdown"
+    "workbench.experimental.cloudChanges.autoStore": "onShutdown",
+    "editor.mouseWheelZoom": true,
+    "terminal.integrated.mouseWheelZoom": true
 }
